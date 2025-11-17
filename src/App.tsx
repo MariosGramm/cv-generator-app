@@ -1,3 +1,4 @@
+import TopNavbar from "./components/TopNavbar.tsx";
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-
+        <TopNavbar />
     </>
   )
 }
