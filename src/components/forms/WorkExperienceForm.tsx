@@ -20,12 +20,12 @@ const WorkExperienceForm = () => {
             <div className="d-flex gap-3">
                 <div className="flex-fill">
                     <label className="form-label">Start Date</label>
-                    <input type="date" className="form-control" />
+                    <input type="month" className="form-control" />
                 </div>
 
                 <div className="flex-fill">
                     <label className="form-label">End Date</label>
-                    <input type="date" className="form-control" />
+                    <input type="month" className="form-control" />
                 </div>
             </div>
 

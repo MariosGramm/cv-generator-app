@@ -8,19 +8,13 @@ const LanguagesForm = () => {
             </div>
 
             <div>
-                <label className="form-label">Proficiency</label>
-                <select className="form-select">
-                    <option>Native</option>
-                    <option>Fluent</option>
-                    <option>Professional</option>
-                    <option>Intermediate</option>
-                    <option>Basic</option>
-                </select>
+                <label className="form-label">Certificate</label>
+                <input type="text" className="form-control" placeholder="Michigan Proficiency Certificate" />
             </div>
 
             {/*Add language button*/}
             <div className="mb-2">
-                <button className="btn btn-outline-dark">Add new certification</button>
+                <button className="btn btn-outline-dark">Add new language</button>
             </div>
 
         </form>

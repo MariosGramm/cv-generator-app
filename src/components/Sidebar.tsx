@@ -8,7 +8,6 @@ import CertificationsForm from "./forms/CertificationsForm.tsx";
 import ProjectsForm from "./forms/ProjectsForm.tsx";
 
 
-
 const Sidebar = () => {
     return (
         <>

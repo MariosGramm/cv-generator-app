@@ -1,47 +1,27 @@
+import PersonalInfoPreview from "./previewSections/PersonalInfoPreview.tsx";
+import EducationPreview from "./previewSections/EducationPreview.tsx";
+import WorkExperiencePreview from "./previewSections/WorkExperiencePreview.tsx";
+import LanguagesPreview from "./previewSections/LanguagesPreview.tsx";
+import SkillsPreview from "./previewSections/SkillsPreview.tsx";
+import CertificationsPreview from "./previewSections/CertificationsPreview.tsx";
+import ProjectsPreview from "./previewSections/ProjectsPreview.tsx";
+
 const Preview = () => {
     return (
-        <div className="bg-white rounded-3 shadow-lg w-75 p-4 mt-3 h-auto overflow-auto">
-
-            {/* Full Name */}
-            <h1 className="text-center">John Doe</h1>
-
-            {/* Personal Info Section */}
-            <div className="row mt-3">
-
-                {/* Left column */}
-                <div className="col-6 d-flex flex-column gap-2">
-                    <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-envelope"></i>
-                        <span>johndoe@gmail.com</span>
-                    </div>
-
-                    <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-geo-alt"></i>
-                        <span>City, Country</span>
-                    </div>
-
-                    <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-github"></i>
-                        <span>JohnDoe</span>
-                    </div>
-                </div>
-
-                {/* Right Column */}
-                <div className="col-6 d-flex flex-column gap-2">
-                    <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-telephone"></i>
-                        <span>+30 699 999 999</span>
-                    </div>
-
-                    <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-linkedin"></i>
-                        <span>John Doe</span>
-                    </div>
-                </div>
-
+        <>
+            <div className="bg-white rounded-3 shadow-lg w-75 p-4 mt-3 h-auto overflow-auto">
+                <PersonalInfoPreview></PersonalInfoPreview>
+                <EducationPreview></EducationPreview>
+                <WorkExperiencePreview></WorkExperiencePreview>
+                <LanguagesPreview></LanguagesPreview>
+                <SkillsPreview></SkillsPreview>
+                <CertificationsPreview></CertificationsPreview>
+                <ProjectsPreview></ProjectsPreview>
             </div>
-        </div>
+        </>
     );
 };
 
 export default Preview;
+
+

@@ -22,14 +22,14 @@ const EducationForm = () => {
             {/*Start Date*/}
             <div className="mb-2">
                 <label className="form-label">Start Date</label>
-                <input type="date"
+                <input type="month"
                 className="form-control"/>
             </div>
 
             {/*End Date*/}
             <div className="mb-2">
                 <label className="form-label">End Date</label>
-                <input type="date"
+                <input type="month"
                 className="form-control"/>
             </div>
 

@@ -12,11 +12,6 @@ const CertificationsForm = () => {
                 <input type="text" className="form-control" placeholder="Amazon, Google..." />
             </div>
 
-            <div>
-                <label className="form-label">Date Obtained</label>
-                <input type="date" className="form-control" />
-            </div>
-
             {/*Add certification button*/}
             <div className="mb-2">
                 <button className="btn btn-outline-dark">Add new certification</button>
