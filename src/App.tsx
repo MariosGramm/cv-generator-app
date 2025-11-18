@@ -1,4 +1,6 @@
 import TopNavbar from "./components/TopNavbar.tsx";
+import Sidebar from "./components/Sidebar.tsx";
+import PreviewSection from "./components/Preview.tsx";
 
 
 function App() {
@@ -6,7 +8,12 @@ function App() {
 
   return (
     <>
-        <TopNavbar />
+        <TopNavbar/>
+        <div className="d-flex justify-content-between align-items-start w-100">
+            <Sidebar/>
+            <PreviewSection/>
+        </div>
+
     </>
   )
 }
