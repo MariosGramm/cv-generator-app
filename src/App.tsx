@@ -1,7 +1,9 @@
 import TopNavbar from "./components/TopNavbar.tsx";
 import Sidebar from "./components/Sidebar.tsx";
 import { useCv } from "./hooks/useCv.ts";
-import Preview from "./components/Preview.tsx";
+import PaginatedPreview from "./components/PaginatedPreview.tsx";
+import {useRef} from "react";
+import {exportPdf} from "./utils/exportPdf.ts";
 
 function App() {
 
@@ -28,9 +30,18 @@ function App() {
         removeProjectItem
     } = useCv();
 
+    const printRef = useRef(null);
+
+    const handleDownload = () => {
+        if (printRef.current) {
+            exportPdf(printRef.current);
+        }
+    };
+
+
     return (
         <>
-            <TopNavbar/>
+            <TopNavbar onDownload={handleDownload} />
 
             <div className="d-flex justify-content-between align-items-start w-100">
                 <Sidebar
@@ -56,7 +67,7 @@ function App() {
                     removeProjectItem={removeProjectItem}
                 />
 
-                <Preview cvData={CvData} />
+                <PaginatedPreview ref={printRef} cvData={CvData} />
             </div>
         </>
     );

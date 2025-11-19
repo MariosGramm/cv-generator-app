@@ -71,7 +71,7 @@ const Sidebar = ({cvData,
     return (
         <>
             {/*Left sidebar*/}
-            <div className = "d-flex flex-column ms-4 mt-3 gap-3 w-75">
+            <div className = "d-flex flex-column ms-4 mt-3 gap-3 w-75 no-print">
 
                 {/*Personal Information Section*/}
                 <SideItem title="Personal Information" icon="bi-person-fill">

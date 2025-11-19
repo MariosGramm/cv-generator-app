@@ -7,7 +7,7 @@ type TopNavbarProps = {
 const TopNavbar = ({onDownload}:TopNavbarProps) => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary border border-dark-subtle">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary border border-dark-subtle no-print">
                 <div className="container-fluid">
                     <ul className="navbar-nav flex-row d-flex justify-content-between w-100">
 
@@ -16,10 +16,10 @@ const TopNavbar = ({onDownload}:TopNavbarProps) => {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link active" onClick={onDownload}>
+                            <button className="nav-link active" onClick={onDownload}>
                                 <i className="bi bi-download"></i>
                                 Download as PDF
-                            </a>
+                            </button>
                         </li>
 
                     </ul>

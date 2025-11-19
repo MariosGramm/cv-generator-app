@@ -65,7 +65,7 @@ const SkillsForm = ({
             <div className="mb-2">
                 <button
                     type="button"
-                    className="btn btn-outline-dark"
+                    className="btn btn-outline-dark w-100"
                     onClick={() => addSkillItem(emptyItem)}
                 >
                     Add new skill
