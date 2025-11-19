@@ -1,27 +1,52 @@
-const LanguagesPreview = () => {
+import type { LanguageItem } from "../../types";
+
+interface LanguagesPreviewProps {
+    languages: LanguageItem[];
+}
+
+const LanguagesPreview = ({ languages }: LanguagesPreviewProps) => {
+
+    if (languages.length === 0) return null;
+
+    //groups of 2
+    const rows = [];
+    for (let i = 0; i < languages.length; i += 2) {
+        rows.push(languages.slice(i, i + 2));
+    }
+
     return (
         <>
-            {/*Header*/}
+            {/* Header */}
             <h3 className="mb-3">Languages</h3>
 
-            {/* Row */}
-            <div className="row mb-4">
+            {/* Rows */}
+            {rows.map((pair, rowIndex) => (
+                <div className="row mb-4" key={rowIndex}>
 
-                {/*Column 1*/}
-                <div className="col-6 d-flex flex-column">
-                    <p className="fw-semibold">Language 1</p>
-                    <p className="fst-italic">Certificate</p>
+                    {/* First column */}
+                    <div className="col-6 d-flex flex-column">
+                        {pair[0]?.language && (
+                            <p className="fw-semibold">{pair[0].language}</p>
+                        )}
+                        {pair[0]?.certificate && (
+                            <p className="fst-italic">{pair[0].certificate}</p>
+                        )}
+                    </div>
+
+                    {/* Second column */}
+                    <div className="col-6 d-flex flex-column">
+                        {pair[1]?.language && (
+                            <p className="fw-semibold">{pair[1].language}</p>
+                        )}
+                        {pair[1]?.certificate && (
+                            <p className="fst-italic">{pair[1].certificate}</p>
+                        )}
+                    </div>
+
                 </div>
-
-                {/*Column 2*/}
-                <div className="col-6 d-flex flex-column">
-                    <p className="fw-semibold">Language 2</p>
-                    <p className="fst-italic">Certificate</p>
-                </div>
-
-            </div>
+            ))}
         </>
     );
-}
+};
 
 export default LanguagesPreview;
