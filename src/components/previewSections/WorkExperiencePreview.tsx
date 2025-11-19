@@ -21,7 +21,7 @@ const WorkExperiencePreview = ({ experience }: WorkExperiencePreviewProps) => {
 
                         {/* Column 1: Start Date - End Date */}
                         <div className="col-3 d-flex flex-column">
-                            {item.startDate && <p>{item.startDate}</p>}
+                            {item.startDate && <p>{item.startDate} -</p>}
                             {item.endDate && <p>{item.endDate}</p>}
                         </div>
 

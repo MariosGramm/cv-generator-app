@@ -94,7 +94,7 @@ const WorkExperienceForm = ({
                     {/* Dates */}
                     <div className="d-flex gap-3">
                         <div className="flex-fill">
-                            <label className="form-label">Start Date -</label>
+                            <label className="form-label">Start Date </label>
                             <input
                                 type="month"
                                 className="form-control"
@@ -125,7 +125,7 @@ const WorkExperienceForm = ({
             <div className="mb-2">
                 <button
                     type="button"
-                    className="btn btn-outline-dark"
+                    className="btn btn-outline-dark w-100"
                     onClick={() => addExperienceItem(emptyItem)}
                 >
                     Add new work experience

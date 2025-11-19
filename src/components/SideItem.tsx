@@ -4,10 +4,9 @@ type SideItemProps = {
     title: string;
     icon: string;
     children: React.ReactNode;
-    canDelete?: boolean; // optional delete button
 };
 
-export default function SideItem({ title, icon, children, canDelete }: SideItemProps) {
+export default function SideItem({ title, icon, children }: SideItemProps) {
 
     return (
         <div className="bg-white rounded-3 shadow-sm w-75">
@@ -26,11 +25,6 @@ export default function SideItem({ title, icon, children, canDelete }: SideItemP
 
                     {/* Caret icon */}
                     <i className="bi bi-caret-down fs-5"></i>
-
-                    {/* Optional delete button */}
-                    {canDelete && (
-                        <i className="bi bi-x-circle fs-5 text-danger" role="button"></i>
-                    )}
                 </div>
 
             </div>

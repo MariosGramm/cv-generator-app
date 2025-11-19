@@ -94,7 +94,7 @@ const ProjectsForm = ({
 
                         {/* Start Date */}
                         <div className="flex-fill">
-                            <label className="form-label">Start Date -</label>
+                            <label className="form-label">Start Date </label>
                             <input
                                 type="month"
                                 className="form-control"
@@ -127,7 +127,7 @@ const ProjectsForm = ({
             <div className="mb-2">
                 <button
                     type="button"
-                    className="btn btn-outline-dark"
+                    className="btn btn-outline-dark w-100"
                     onClick={() => addProjectItem(emptyItem)}
                 >
                     Add new project

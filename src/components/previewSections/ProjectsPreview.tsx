@@ -20,7 +20,7 @@ const ProjectsPreview = ({ projects }: ProjectsPreviewProps) => {
 
                         {/* LEFT COLUMN — Start & End Dates */}
                         <div className="col-3 d-flex flex-column">
-                            {item.startDate && <p>{item.startDate}</p>}
+                            {item.startDate && <p>{item.startDate} -</p>}
                             {item.endDate && <p>{item.endDate}</p>}
                         </div>
 
