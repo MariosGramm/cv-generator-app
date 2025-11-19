@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 type SideItemProps = {
     title: string;
@@ -8,11 +8,17 @@ type SideItemProps = {
 
 export default function SideItem({ title, icon, children }: SideItemProps) {
 
+    const [open, setOpen] = useState(true);
+
     return (
         <div className="bg-white rounded-3 shadow-sm w-75">
 
             {/* Header */}
-            <div className="d-flex justify-content-between align-items-center p-3">
+            <div
+                className="d-flex justify-content-between align-items-center p-3"
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(!open)}
+            >
 
                 {/* Left: icon + title */}
                 <div className="d-flex align-items-center gap-2">
@@ -20,19 +26,19 @@ export default function SideItem({ title, icon, children }: SideItemProps) {
                     <h4 className="m-0">{title}</h4>
                 </div>
 
-                {/* Right: caret + optional delete */}
-                <div className="d-flex align-items-center gap-3">
+                {/* Right: caret */}
+                <i
+                    className={`bi fs-5 ${open ? "bi-caret-down" : "bi-caret-right"}`}
+                ></i>
 
-                    {/* Caret icon */}
-                    <i className="bi bi-caret-down fs-5"></i>
+            </div>
+
+            {/* Dropdown Content */}
+            {open && (
+                <div className="border-top p-3">
+                    {children}
                 </div>
-
-            </div>
-
-            {/* Dropdown Content*/}
-            <div className="border-top p-3">
-                {children}
-            </div>
+            )}
 
         </div>
     );
