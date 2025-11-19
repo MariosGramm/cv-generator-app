@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# 📄 CV Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic CV generator built with **React + TypeScript**, designed to create resumes through an interactive form interface and export them as clean PDF documents.
 
-Currently, two official plugins are available:
+This project was built with production-ready structure, feature-based branching strategy, reusable components, and CI/CD deployment using Azure Static Web Apps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project is live on : https://green-sea-0038cae03.3.azurestaticapps.net
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### **🔧 Dynamic Form Editing**
+- Left side: **Sidebar Forms** where the user inputs personal info, education, experience, skills, languages, certifications & projects.
+- The state is fully managed using custom React hooks.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **👀 Real-time CV Preview**
+- Right side: **Paginated CV Preview**
+- Updates instantly as the user edits the form
+- Fully styled layout ready for export
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### **📎 PDF Export**
+- The preview converts into a properly formatted multi-page PDF
+- Designed with separate print styling (`pdf.css`)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### **🌍 Deployment**
+The application is deployed on **Azure Static Web Apps** and automatically redeployed on pushes to `main` using **GitHub Actions (CI/CD)**.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This demonstrates real DevOps workflow integration in front-end projects.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌳 Branching Strategy (Professional Workflow)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Each feature was developed in its own dedicated branch following industry best practices:
+
+| Branch Name | Purpose |
+|-------------|---------|
+| `feature/forms-and-state` | Implements state management and form logic |
+| `feature/layout-structure` | Establishes UI structure & layout |
+| `feature/pagination-and-pdf-export` | Adds multi-page preview & PDF export logic |
+| `feature/project-structure` | Sets up folder structure, components & architecture |
+| `fix/eliminate-bugs` | Final bug fixes & polish before deployment |
+
+This approach improves maintainability, readability, and reflects real-world teamwork workflows.
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Frontend | React, TypeScript, Bootstrap |
+| State Logic | Custom hooks + controlled forms |
+| PDF Export | html2pdf.js |
+| Deployment | Azure Static Web Apps |
+| CI/CD | GitHub Actions |
+
+---
+
+## 📦 Install & Run
+
+```sh
+npm install
+npm run dev
