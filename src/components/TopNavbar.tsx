@@ -1,4 +1,10 @@
-const  TopNavbar = () => {
+
+type TopNavbarProps = {
+    onDownload() : void
+}
+
+
+const TopNavbar = ({onDownload}:TopNavbarProps) => {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary border border-dark-subtle">
@@ -10,7 +16,7 @@ const  TopNavbar = () => {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">
+                            <a className="nav-link active" onClick={onDownload}>
                                 <i className="bi bi-download"></i>
                                 Download as PDF
                             </a>

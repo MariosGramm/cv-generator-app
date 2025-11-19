@@ -94,7 +94,7 @@ const WorkExperienceForm = ({
                     {/* Dates */}
                     <div className="d-flex gap-3">
                         <div className="flex-fill">
-                            <label className="form-label">Start Date -</label>
+                            <label className="form-label">Start Date </label>
                             <input
                                 type="month"
                                 className="form-control"

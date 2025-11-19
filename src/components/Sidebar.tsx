@@ -71,7 +71,7 @@ const Sidebar = ({cvData,
     return (
         <>
             {/*Left sidebar*/}
-            <div className = "d-flex flex-column ms-4 mt-3 gap-3 w-50">
+            <div className = "d-flex flex-column ms-4 mt-3 gap-3 w-75">
 
                 {/*Personal Information Section*/}
                 <SideItem title="Personal Information" icon="bi-person-fill">
@@ -122,7 +122,7 @@ const Sidebar = ({cvData,
                 </SideItem>
 
                 {/*Certifications Section*/}
-                <SideItem title="Certifications" icon="bi-file-text-fill" canDelete>
+                <SideItem title="Certifications" icon="bi-file-text-fill">
                     <CertificationsForm
                         certifications={cvData.certifications}
                         addCertificationItem={addCertificationItem}
@@ -132,7 +132,7 @@ const Sidebar = ({cvData,
                 </SideItem>
 
                 {/*Projects Section*/}
-                <SideItem title="Projects" icon="bi-folder-fill" canDelete>
+                <SideItem title="Projects" icon="bi-folder-fill">
                     <ProjectsForm
                         projects={cvData.projects}
                         addProjectItem={addProjectItem}
